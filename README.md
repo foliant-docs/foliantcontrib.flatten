@@ -1,4 +1,3 @@
-<raw>
 # Project Flattener for Foliant
 
 This preprocessor converts a Foliant project source directory into a single Markdown file containing all the sources, preserving order and inheritance.
@@ -38,4 +37,3 @@ Default value is `__all__.md`.
 > **Note**
 >
 > Flatten preprocessor uses includes, so when you install Pandoc backend, Includes preprocessor will also be installed, along with Flatten.
-</raw>
