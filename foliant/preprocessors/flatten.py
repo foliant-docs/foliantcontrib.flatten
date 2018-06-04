@@ -48,10 +48,8 @@ class Preprocessor(BasePreprocessor):
         self.logger.debug('Resolving includes.')
 
         flat_src = includes.Preprocessor(
-            self.project_path,
-            self.logger,
-            self.config,
             self.context,
+            self.logger,
             {'recursive': False}
         ).process_includes(flat_src)
 
