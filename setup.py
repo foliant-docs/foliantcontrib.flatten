@@ -17,7 +17,7 @@ setup(
     description=SHORT_DESCRIPTION,
     long_description=LONG_DESCRIPTION,
     long_description_content_type='text/markdown',
-    version='1.0.2',
+    version='1.0.3',
     author='Konstantin Molchanov',
     author_email='moigagoo@live.com',
     url='https://github.com/foliant-docs/foliantcontrib.flatten',
@@ -26,7 +26,7 @@ setup(
     platforms='any',
     install_requires=[
         'foliant>=1.0.5',
-        'foliantcontrib.includes'
+        'foliantcontrib.includes>=1.0.7'
     ],
     classifiers=[
         "Development Status :: 5 - Production/Stable",

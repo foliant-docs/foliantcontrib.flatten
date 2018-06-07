@@ -1,3 +1,8 @@
+# 1.0.3
+
+-   Use flattened file path in `includes` preprocessor call.
+-   Require `includes` preprocessor 1.0.7.
+
 # 1.0.2
 
 -   Fix incorrect `includes` preprocessor call.
