@@ -47,17 +47,17 @@ class Preprocessor(BasePreprocessor):
 
         self.logger.debug('Resolving includes.')
 
+        flat_src_file_path = self.working_dir / self.options['flat_src_file_name']
+
         flat_src = includes.Preprocessor(
             self.context,
             self.logger,
             {'recursive': False}
-        ).process_includes(flat_src)
+        ).process_includes(flat_src_file_path, flat_src)
 
         for markdown_file in self.working_dir.rglob('*.md'):
             self.logger.debug(f'Removing {markdown_file}')
             markdown_file.unlink()
-
-        flat_src_file_path = self.working_dir / self.options['flat_src_file_name']
 
         with open(flat_src_file_path, 'w', encoding='utf8') as flat_src_file:
             self.logger.debug(f'Saving flat source into {flat_src_file_path}')
