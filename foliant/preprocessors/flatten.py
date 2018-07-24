@@ -15,7 +15,8 @@ def flatten(chapters: List[Chapter], working_dir: Path, buffer=[], heading_level
         elif isinstance(chapter, dict):
             (title, value), = (*chapter.items(),)
 
-            buffer.append(f'{"#"*heading_level} {title}')
+            if title:
+                buffer.append(f'{"#"*heading_level} {title}')
 
             if isinstance(value, str):
                 chapter_path = (working_dir / value).absolute()
