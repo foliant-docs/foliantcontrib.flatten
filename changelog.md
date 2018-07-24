@@ -1,3 +1,7 @@
+# 1.0.4
+
+-   Skip empty headings of nested subsections.
+
 # 1.0.3
 
 -   Use flattened file path in `includes` preprocessor call.
