@@ -1,6 +1,6 @@
 # 1.0.5
 
--   Add an option to keep original files in workingdir after flattening `keep_sources`.
+-   Add the `keep_sources` option to keep original files in the temporary working directory after flattening.
 
 # 1.0.4
 
