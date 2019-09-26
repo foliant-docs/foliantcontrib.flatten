@@ -24,15 +24,20 @@ preprocessors:
   - flatten
 ```
 
-The preprocessor has only one option—`flat_src_file_name`. It's the name of the flattened file that is created in the tmp directory:
+The preprocessor has a number of options:
 
 ```yaml
 preprocessors:
   - flatten:
       flat_src_file_name: flattened.md
+      keep_sources: False
 ```
 
-Default value is `__all__.md`.
+`flat_src_file_name`
+:    the name of the flattened file that is created in the tmp directory. Default: `__all__.md`.
+
+`keep_sources`
+:   keep markdown sources in the temp dir after flattening. If `False` — all markdown files except the flattened will be deleted from working dir. Default: `False`.
 
 > **Note**
 >

@@ -31,7 +31,8 @@ def flatten(chapters: List[Chapter], working_dir: Path, buffer=[], heading_level
 
 
 class Preprocessor(BasePreprocessor):
-    defaults = {'flat_src_file_name': '__all__.md'}
+    defaults = {'flat_src_file_name': '__all__.md',
+                'keep_sources': False}
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -56,9 +57,10 @@ class Preprocessor(BasePreprocessor):
             {'recursive': False}
         ).process_includes(flat_src_file_path, flat_src)
 
-        for markdown_file in self.working_dir.rglob('*.md'):
-            self.logger.debug(f'Removing {markdown_file}')
-            markdown_file.unlink()
+        if not self.options['keep_sources']:
+            for markdown_file in self.working_dir.rglob('*.md'):
+                self.logger.debug(f'Removing {markdown_file}')
+                markdown_file.unlink()
 
         with open(flat_src_file_path, 'w', encoding='utf8') as flat_src_file:
             self.logger.debug(f'Saving flat source into {flat_src_file_path}')
