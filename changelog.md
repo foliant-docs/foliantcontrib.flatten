@@ -1,3 +1,7 @@
+# 1.0.5
+
+-   Add the `keep_sources` option to keep original files in the temporary working directory after flattening.
+
 # 1.0.4
 
 -   Skip empty headings of nested subsections.
