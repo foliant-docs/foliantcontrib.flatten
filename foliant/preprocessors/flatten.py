@@ -47,15 +47,15 @@ class Preprocessor(BasePreprocessor):
 
     def _process_local_links(self, source: str) -> str:
         '''
-        Cut out path from local links, leaving only the anchor.
+        Cut out file path from local links keeping only the anchor.
 
         Since we are flattening all chapters into one file, all local links
-        (links to other chapters or local md files) will stop working. We assume
-        that all content which is referenced by local links was flattened into
-        the current document, which means that we can remove path from all the
-        local links and leave only the anchor.
+        (links to other chapters or local Markdown files) will stop working.
+        We assume that all content which is referenced by local links
+        was flattened into the current document. It means that we may remove
+        file paths from all local links and keep only anchors.
 
-        This doesn't cover the case with dublicate anchors on the flattened page.
+        This doesn’t cover the case with duplicate anchors in flattened document.
 
         :param source: source file where the links should be processed.
         :returns: processed source with paths cut out from all local links.
