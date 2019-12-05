@@ -60,14 +60,16 @@ class Preprocessor(BasePreprocessor):
         :param source: source file where the links should be processed.
         :returns: processed source with paths cut out from all local links.
         '''
-        def _sub(match) -> str:
+        def _fix_links(match) -> str:
             if match.group('path').startswith('http'):
+                # external links are left unchanged
                 return match.group(0)
-            new_link = f'[{match.group("caption")}]({match.group("anchor")})'
-            return new_link
+
+            fixed_link = f'[{match.group("caption")}]({match.group("anchor")})'
+            return fixed_link
 
         pattern = re.compile(r'\[(?P<caption>.+?)\]\((?P<path>.+)(?P<anchor>#.+)\)')
-        return pattern.sub(_sub, source)
+        return pattern.sub(_fix_links, source)
 
     def apply(self):
         self.logger.debug('Applying preprocessor')
