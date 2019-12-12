@@ -1,3 +1,7 @@
+# 1.0.6
+
+-   Rewrite local links (e.g. `some_file.md#some_id` → `#some_id`).
+
 # 1.0.5
 
 -   Add the `keep_sources` option to keep original files in the temporary working directory after flattening.
