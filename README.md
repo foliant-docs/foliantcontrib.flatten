@@ -1,4 +1,4 @@
-[![](https://img.shields.io/pypi/v/flatten.dbdoc.svg)](https://pypi.org/project/flatten.dbdoc/)  [![](https://img.shields.io/github/v/tag/foliant-docs/flatten.dbdoc.svg?label=GitHub)](https://github.com/foliant-docs/flatten.dbdoc)
+[![](https://img.shields.io/pypi/v/foliantcontrib.flatten.svg)](https://pypi.org/project/foliantcontrib.flatten/)  [![](https://img.shields.io/github/v/tag/foliant-docs/foliantcontrib.flatten.svg?label=GitHub)](https://github.com/foliant-docs/foliantcontrib.flatten)
 
 # Project Flattener for Foliant
 
