@@ -1,3 +1,7 @@
+# 1.0.7
+
+-   Fix: bug in rewrite local links regex.
+
 # 1.0.6
 
 -   Rewrite local links (e.g. `some_file.md#some_id` → `#some_id`).

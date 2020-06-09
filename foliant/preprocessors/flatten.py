@@ -68,7 +68,7 @@ class Preprocessor(BasePreprocessor):
             fixed_link = f'[{match.group("caption")}]({match.group("anchor")})'
             return fixed_link
 
-        pattern = re.compile(r'\[(?P<caption>.+?)\]\((?P<path>.+)(?P<anchor>#.+)\)')
+        pattern = re.compile(r'\[(?P<caption>.+?)\]\((?P<path>[^\)]+?)(?P<anchor>#[^\)]+)\)')
         return pattern.sub(_fix_links, source)
 
     def apply(self):
